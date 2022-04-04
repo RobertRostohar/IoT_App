@@ -37,6 +37,9 @@ layer:
     - XIP_BOOT_HEADER_ENABLE=1
     - XIP_EXTERNAL_FLASH=1
 
+  add-paths:
+    - ./Board/IMXRT1050-EVKB
+
   misc:
     - Link:
       - '--predefine="-DXIP_BOOT_HEADER_ENABLE=1"'
@@ -97,12 +100,10 @@ layer:
   groups:
     - group: Board
       files:
-        - file: ./main.h
-        - file: ./main.c
+        - file: ./Board/IMXRT1050-EVKB/main.h
+        - file: ./Board/IMXRT1050-EVKB/main.c
+        - file: ./Board/IMXRT1050-EVKB/retarget_stdio.c
         - file: ./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_flexspi_nor_sdram.scf
-    - group: Board IO
-      files:
-        - file: ./Board_IO/retarget_stdio.c
     - group: MCUXpresso
       files:
         - file: ./IMXRT1050-EVKB.mex
