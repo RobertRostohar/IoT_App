@@ -80,9 +80,9 @@ layer:
     - component: AWS::Security:PKCS11&No Implementation
 
   groups:
-    - group: Documentation
-      files: 
-        - file: ./README.md
+    # - group: Documentation
+    #   files: 
+    #     - file: ./README.md
 
     - group: Application
       # defines:
