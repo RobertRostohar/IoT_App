@@ -38,9 +38,11 @@ layer:
     - ./amazon-freertos/libraries/abstractions/platform/freertos/include
     - ./amazon-freertos/libraries/abstractions/secure_sockets/include
     - ./amazon-freertos/libraries/abstractions/transport/secure_sockets
+    - ./amazon-freertos/libraries/abstractions/wifi/include
     - ./amazon-freertos/libraries/c_sdk/standard/common/include
     - ./amazon-freertos/libraries/c_sdk/standard/common/include/private
     - ./amazon-freertos/libraries/freertos_plus/standard/crypto/include
+    - ./amazon-freertos/libraries/freertos_plus/standard/tls/include
 
   misc:
     - C*:
@@ -98,9 +100,11 @@ layer:
       #   - ./amazon-freertos/libraries/abstractions/platform/freertos/include
       #   - ./amazon-freertos/libraries/abstractions/secure_sockets/include
       #   - ./amazon-freertos/libraries/abstractions/transport/secure_sockets
+      #   - ./amazon-freertos/libraries/abstractions/wifi/include
       #   - ./amazon-freertos/libraries/c_sdk/standard/common/include
       #   - ./amazon-freertos/libraries/c_sdk/standard/common/include/private
       #   - ./amazon-freertos/libraries/freertos_plus/standard/crypto/include
+      #   - ./amazon-freertos/libraries/freertos_plus/standard/tls/include
       groups:
         - group: main
           files:
