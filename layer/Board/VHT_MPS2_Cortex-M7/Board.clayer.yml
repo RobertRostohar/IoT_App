@@ -20,6 +20,9 @@ layer:
   #   - pack: Keil::ARM_Compiler
   #   - pack: Keil::V2M-MPS2_CMx_BSP@1.8.0
 
+  add-paths:
+    - ./Board/VHT_MPS2_Cortex-M7
+
   components:
     - component: Device:Startup&C Startup
 
@@ -39,14 +42,10 @@ layer:
   groups:
     - group: Board
       files:
-        - file: ./main.h
-        - file: ./main.c
-        - file: ./fvp_config.txt
-    - group: Board IO
-      files:
-        - file: ./Board_IO/retarget_stdio.c
-        - file: ./Board_IO/vio_vht.c
-    - group: Board Driver
-      files:
-        - file: ./Board_Driver/ETH_LAN91C111.h
-        - file: ./Board_Driver/ETH_LAN91C111.c
+        - file: ./Board/VHT_MPS2_Cortex-M7/main.h
+        - file: ./Board/VHT_MPS2_Cortex-M7/main.c
+        - file: ./Board/VHT_MPS2_Cortex-M7/retarget_stdio.c
+        - file: ./Board/VHT_MPS2_Cortex-M7/vio_vht.c
+        - file: ./Board/VHT_MPS2_Cortex-M7/ETH_LAN91C111.h
+        - file: ./Board/VHT_MPS2_Cortex-M7/ETH_LAN91C111.c
+        - file: ./Board/VHT_MPS2_Cortex-M7/fvp_config.txt
