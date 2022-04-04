@@ -30,6 +30,6 @@ project:
       for-type:
         - +Board-WiFi
 
-    - layer: ../layer/Socket/VHT/Socket.clayer.yml
+    - layer: ../layer/Socket/VSocket/Socket.clayer.yml
       for-type:
         - +VHT

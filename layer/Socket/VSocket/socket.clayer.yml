@@ -3,7 +3,7 @@
 layer:
   # type: Socket
   # name: Virtual Socket
-  description: IoT Socket interface connecting to Arm Virtual Hardware
+  description: IoT Socket interface connecting to Arm Virtual Hardware over Virtual Socket
 
   # interfaces:
   #   - consumes:
@@ -20,10 +20,6 @@ layer:
 
   groups:
     - group: Socket
-      groups:
-      - group: main
-        files: 
-          - file: ./socket_startup.c
-      - group: VSocket
-        files: 
-          - file: ./vsocket/iot_socket.c
+      files: 
+        - file: ./Socket/VSocket/socket_startup.c
+        - file: ./Socket/VSocket/iot_socket.c
