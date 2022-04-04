@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.1/tools/projmgr/schemas/cproject.schema.json
+
+project:
+
+  layers:
+    - layer: ../layer/App//AWS_MQTT_MutualAuth_Demo/App.clayer.yml
+
+    - layer: ../layer/Board/IMXRT1050-EVKB/Board.clayer.yml
+      for-type: 
+        - +Board-TCP
+        - +Board-WiFi
+
+    - layer: ../layer/Board/VHT_MPS2_Cortex-M7/Board.clayer.yml
+      for-type:
+        - +VHT
+
+    - layer: ../layer/Module/ESP8266/Module.clayer.yml
+      for-type: 
+        - +Board-WiFi
+
+    - layer: ../layer/Interface/AWS/FreeRTOS+TCP/Interface.clayer.yml
+      for-type:
+        - +Board-TCP
+
+    - layer: ../layer/Interface/AWS/Socket/Interface.clayer.yml
+      for-type:
+        - +VHT
+
+    - layer: ../layer/Interface/AWS/WiFi/Interface.clayer.yml
+      for-type:
+        - +Board-WiFi
+
+    - layer: ../layer/Socket/VHT/Socket.clayer.yml
+      for-type:
+        - +VHT
