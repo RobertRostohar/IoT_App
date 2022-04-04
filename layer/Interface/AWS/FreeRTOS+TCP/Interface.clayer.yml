@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.1/tools/projmgr/schemas/clayer.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/schemas/projmgr/0.9.3/tools/projmgr/schemas/clayer.schema.json
 
 layer:
   # type: Interface AWS
@@ -16,8 +16,8 @@ layer:
   #   - pack: AWS::FreeRTOS-Plus-TCP@2.3.2-Beta
 
   add-paths:
-    - ./Interfaces
-    - ./config_files
+    - ./Interfaces/FreeRTOS+TCP
+    - ./config_files/FreeRTOS+TCP
 
   misc:
     - C*:
@@ -32,19 +32,17 @@ layer:
   groups:
     - group: Interface_AWS
       # add-paths:
-      #   - ./Interfaces
-      #   - ./config_files
+      #   - ./Interfaces/FreeRTOS+TCP
+      #   - ./config_files/FreeRTOS+TCP
       groups:
-        - group: main
-          files:
-            - file: ./network_startup.c
         - group: config_files
           files:
-            - file: ./config_files/aws_iot_network_config.h
-            - file: ./config_files/FreeRTOSIPConfig.h
-            - file: ./config_files/iot_secure_sockets_config.h
+            - file: ./config_files/FreeRTOS+TCP/aws_iot_network_config.h
+            - file: ./config_files/FreeRTOS+TCP/FreeRTOSIPConfig.h
+            - file: ./config_files/FreeRTOS+TCP/iot_secure_sockets_config.h
         - group: interfaces
           files:
-            - file: ./Interfaces/iot_secure_sockets.c
-            - file: ./Interfaces/NetworkInterface.c
-            - file: ./Interfaces/NetworkInterfaceConfig.h
+            - file: ./Interfaces/FreeRTOS+TCP/network_startup.c
+            - file: ./Interfaces/FreeRTOS+TCP/iot_secure_sockets.c
+            - file: ./Interfaces/FreeRTOS+TCP/NetworkInterface.c
+            - file: ./Interfaces/FreeRTOS+TCP/NetworkInterfaceConfig.h

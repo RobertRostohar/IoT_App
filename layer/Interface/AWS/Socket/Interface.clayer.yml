@@ -13,8 +13,8 @@ layer:
   #     - AWS_Socket:
 
   add-paths:
-    - ./Interfaces
-    - ./config_files
+    - ./Interfaces/Socket
+    - ./config_files/Socket
 
   misc:
     - C*:
@@ -23,17 +23,15 @@ layer:
   groups:
     - group: Interface_AWS
       # add-paths:
-      #   - ./Interfaces
-      #   - ./config_files
+      #   - ./Interfaces/Socket
+      #   - ./config_files/Socket
       groups:
-        - group: main
-          files:
-            - file: ./network_startup.c
         - group: config_files
           files:
-            - file: ./config_files/aws_iot_network_config.h
-            - file: ./config_files/FreeRTOSIPConfig.h
-            - file: ./config_files/iot_secure_sockets_config.h
+            - file: ./config_files/Socket/aws_iot_network_config.h
+            - file: ./config_files/Socket/FreeRTOSIPConfig.h
+            - file: ./config_files/Socket/iot_secure_sockets_config.h
         - group: interfaces
           files:
-            - file: ./Interfaces/iot_secure_sockets.c
+            - file: ./Interfaces/Socket/network_startup.c
+            - file: ./Interfaces/Socket/iot_secure_sockets.c
